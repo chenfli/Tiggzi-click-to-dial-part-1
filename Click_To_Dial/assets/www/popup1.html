@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <script type="text/javascript" src="res/lib/detectmobilebrowser.js">
+        </script>
+        <script type="text/javascript">
+         var screen_mobile = true;
+ var screen_width = 240;
+ var screen_height = 320;
+ var browser_mobile = is_mobile_browser();
+
+ if (screen_mobile && !browser_mobile && top == window)
+ {
+     var h = top.location.hash;
+     var s = top.location.search;
+     top.location.href = './mob-popup1.html' + h + s;
+ }
+        </script>
+        <title>
+            popup1
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="res/lib/jquerymobile/1.1.0/jquery.mobile-1.1.0.min.css" rel="stylesheet"
+        />
+        <link type="text/css" href="files/views/assets/css/f.css" rel="stylesheet" />
+        <script type="text/javascript" src="res/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquery/jquery-1.6.4.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquerymobile/jquery.mobile.iepatch.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquerymobile/1.1.0/jquery.mobile-1.1.0.js">
+        </script>
+        <script type="text/javascript" src="res/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="res/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/tiggzi.js">
+        </script>
+        <script type="text/javascript" src="res/lib/cordova.js">
+        </script>
+        <script type="text/javascript" src="res/lib/childbrowser.js">
+        </script>
+        <link href="res/css/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="files/views/assets/js/Person.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/clearhash.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="dialog" style="min-height:320px;" dsid="popup1" id="j_33" class="type-interior"
+        data-theme='a'>
+            <div data-role="header" data-position='fixed' data-theme='a' name="mobileheader3"
+            id="j_35" class='mobileheader3'>
+                <h1 dsid="mobileheader3">
+                    Update Telephone
+                </h1>
+            </div>
+            <div data-role="content" id="j_36" name="mobilecontainer3" class="mobilecontainer3"
+            dsid="mobilecontainer3" data-theme='a'>
+                <link href="popup1.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="popup1.js">
+                </script>
+                <div class="mobilegrid3_wrapper">
+                    <table id="j_37" class="mobilegrid3" dsid="mobilegrid2" cellpadding=0 cellspacing=0>
+                        <col style="width:31.9%;">
+                            <col style="width:68.1%;">
+                                <tr>
+                                    <td id="j_38" name="mobilegridcell3" class="mobilegridcell5" colspan=1 rowspan=1>
+                                        <div class="cell-wrapper">
+                                            <div class="mobileimage4_div">
+                                                <img class="mobileimage4" src="files/views/assets/image/no-image.jpg" id="j_39"
+                                                dsid="mobileimage3" name="mobileimage3" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td id="j_40" name="mobilegridcell4" class="mobilegridcell6" colspan=1 rowspan=1>
+                                        <div class="cell-wrapper">
+                                            <div name="popLblName" id="j_41" dsid="popLblName" data-role="tiggr_label" class='mobilelabel9'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                    </table>
+                </div>
+                <div data-role="fieldcontain" class="mobiletextinput1">
+                    <input type="text" name="telnput" dsid="telnput" id="j_42" value="" tabIndex="2"
+                    data-theme='a' class='mobiletextinput1' />
+                </div>
+                <div class="mobilebutton2_wrapper ">
+                    <a data-role="button" name="mobilebutton3" dsid="mobilebutton3" class=' mobilebutton2'
+                    id='j_43' data-inline='false' data-theme='a' tabIndex="1">Update Telephone</a>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

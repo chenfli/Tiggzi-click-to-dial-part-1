@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <script type="text/javascript" src="res/lib/detectmobilebrowser.js">
+        </script>
+        <script type="text/javascript">
+         var screen_mobile = true;
+ var screen_width = 320;
+ var screen_height = 480;
+ var browser_mobile = is_mobile_browser();
+
+ if (screen_mobile && !browser_mobile && top == window)
+ {
+     var h = top.location.hash;
+     var s = top.location.search;
+     top.location.href = './mob-mobilescreen1.html' + h + s;
+ }
+        </script>
+        <title>
+            mobilescreen1
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="res/lib/jquerymobile/1.1.0/jquery.mobile-1.1.0.min.css" rel="stylesheet"
+        />
+        <link type="text/css" href="files/views/assets/css/f.css" rel="stylesheet" />
+        <script type="text/javascript" src="res/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquery/jquery-1.6.4.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquerymobile/jquery.mobile.iepatch.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquerymobile/1.1.0/jquery.mobile-1.1.0.js">
+        </script>
+        <script type="text/javascript" src="res/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="res/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/tiggzi.js">
+        </script>
+        <script type="text/javascript" src="res/lib/cordova.js">
+        </script>
+        <script type="text/javascript" src="res/lib/childbrowser.js">
+        </script>
+        <link href="res/css/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="files/views/assets/js/Person.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/clearhash.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="mobilescreen1" id="j_0" class="type-interior"
+        data-theme='a'>
+            <div data-role="header" data-position='fixed' data-theme='a' name="mobileheader1"
+            id="j_2" class='mobileheader1'>
+                <h1 dsid="mobileheader1">
+                    Facebook - Click to call
+                </h1>
+            </div>
+            <div data-role="content" id="j_3" name="mobilecontainer1" class="mobilecontainer1"
+            dsid="mobilecontainer1" data-theme='a'>
+                <link href="mobilescreen1.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="mobilescreen1.js">
+                </script>
+                <div class="mobilebutton1_wrapper ">
+                    <a data-role="button" name="mobilebutton1" dsid="mobilebutton1" class=' mobilebutton1'
+                    id='j_4' data-inline='false' data-theme='a' tabIndex="1">Connect Using Facebook</a>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

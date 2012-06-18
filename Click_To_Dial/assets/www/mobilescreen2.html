@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <script type="text/javascript" src="res/lib/detectmobilebrowser.js">
+        </script>
+        <script type="text/javascript">
+         var screen_mobile = true;
+ var screen_width = 320;
+ var screen_height = 480;
+ var browser_mobile = is_mobile_browser();
+
+ if (screen_mobile && !browser_mobile && top == window)
+ {
+     var h = top.location.hash;
+     var s = top.location.search;
+     top.location.href = './mob-mobilescreen2.html' + h + s;
+ }
+        </script>
+        <title>
+            mobilescreen2
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="res/lib/jquerymobile/1.1.0/jquery.mobile-1.1.0.min.css" rel="stylesheet"
+        />
+        <link type="text/css" href="files/views/assets/css/f.css" rel="stylesheet" />
+        <script type="text/javascript" src="res/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquery/jquery-1.6.4.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquerymobile/jquery.mobile.iepatch.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquerymobile/1.1.0/jquery.mobile-1.1.0.js">
+        </script>
+        <script type="text/javascript" src="res/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="res/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/tiggzi.js">
+        </script>
+        <script type="text/javascript" src="res/lib/cordova.js">
+        </script>
+        <script type="text/javascript" src="res/lib/childbrowser.js">
+        </script>
+        <link href="res/css/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="files/views/assets/js/Person.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/clearhash.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="mobilescreen2" id="j_7" class="type-interior"
+        data-theme='d'>
+            <div data-role="header" data-position='fixed' data-theme='f' name="mobileheader2"
+            id="j_9" class='mobileheader2'>
+                <h1 dsid="mobileheader2">
+                    Facebook - Click to call
+                </h1>
+            </div>
+            <div data-role="content" id="j_10" name="mobilecontainer2" class="mobilecontainer2"
+            dsid="mobilecontainer2" data-theme='d'>
+                <link href="mobilescreen2.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="mobilescreen2.js">
+                </script>
+                <div class="mobileimage1_div">
+                    <img class="mobileimage1" src="files/views/assets/image/ATT-Logo-560x287.jpg" id="j_11"
+                    dsid="mobileimage5" name="mobileimage5" />
+                </div>
+                <div name="mobilelabel5" id="j_12" dsid="mobilelabel5" data-role="tiggr_label" class='mobilelabel1'>
+                    Welcome back:
+                </div>
+                <div class="mobilegrid1_wrapper">
+                    <table id="j_13" class="mobilegrid1" dsid="mobilegrid2" cellpadding=0 cellspacing=0>
+                        <col style="width:35.7%;">
+                            <col style="width:64.3%;">
+                                <tr>
+                                    <td id="j_14" name="mobilegridcell3" class="mobilegridcell1" colspan=1 rowspan=1>
+                                        <div class="cell-wrapper">
+                                            <div class="mobileimage2_div">
+                                                <img class="mobileimage2" src="files/views/assets/image/no-image.jpg" id="j_15"
+                                                dsid="Mypic" name="Mypic" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td id="j_16" name="mobilegridcell4" class="mobilegridcell2" colspan=1 rowspan=1>
+                                        <div class="cell-wrapper">
+                                            <div name="MyTel" id="j_17" dsid="MyTel" data-role="tiggr_label" class='mobilelabel2'>
+                                            </div>
+                                            <div name="Myname" id="j_18" dsid="Myname" data-role="tiggr_label" class='mobilelabel3'>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                    </table>
+                </div>
+                <div name="mobilelabel1" id="j_19" dsid="mobilelabel1" data-role="tiggr_label" class='mobilelabel4'>
+                </div>
+                <div name="mobilelabel6" id="j_20" dsid="mobilelabel6" data-role="tiggr_label" class='mobilelabel5'>
+                    Call a friend through NASB...
+                </div>
+                <div class="mobilegrid2_wrapper">
+                    <table id="j_21" class="mobilegrid2" dsid="FriendsGrid" cellpadding=0 cellspacing=0>
+                        <col style="width:35.7%;">
+                            <col style="width:64.3%;">
+                                <tr>
+                                    <td id="j_22" name="GridPic" class="mobilegridcell3" colspan=1 rowspan=1>
+                                        <div class="cell-wrapper">
+                                            <div class="mobileimage3_div">
+                                                <img class="mobileimage3" src="files/views/assets/image/no-image.jpg" id="j_23"
+                                                dsid="mobileimage4" name="mobileimage4" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td id="j_24" name="GridName" class="mobilegridcell4" colspan=1 rowspan=1>
+                                        <div class="cell-wrapper">
+                                            <div name="namelabel" id="j_25" dsid="namelabel" data-role="tiggr_label" class='mobilelabel6'>
+                                            </div>
+                                            <div name="telLabel" id="j_26" dsid="telLabel" data-role="tiggr_label" fbname="test"
+                                            class='mobilelabel7'>
+                                            </div>
+                                            <div name="mobilelabel4" id="j_27" dsid="mobilelabel4" data-role="tiggr_label" class='mobilelabel8'>
+                                                Click To Call
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                    </table>
+                </div>
+            </div>
+            <div data-role="footer" class="mobilefooter2" data-position="fixed" id="j_28" data-theme='d'>
+            </div>
+        </div>
+    </body>
+
+</html>
